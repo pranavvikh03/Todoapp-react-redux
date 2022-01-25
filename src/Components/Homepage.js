@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import {  useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Components_CSS/Homepage.css";
 import { addTask, clearTasks } from '../state/action-creators/index';
 
@@ -17,6 +17,11 @@ export default function Home() {
             temp.map((element)=>dispatch(addTask(element)))
         }
     }, [dispatch,tasks]);
+    const navigate = useNavigate();
+    if(token==="invalid")
+    {
+        navigate("/login",{replace:true})
+    }
     const today = new Date();
     return(
         

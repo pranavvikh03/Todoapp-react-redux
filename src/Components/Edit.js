@@ -4,6 +4,12 @@ import { editTask } from '../state/action-creators/index';
 import { useSelector,useDispatch } from 'react-redux';
 
 export default function Edit() {
+    const navigate = useNavigate();
+    const token = useSelector(state => state.token)
+    if(token==="invalid")
+    {
+        navigate("/login",{replace:true})
+    }
     const { id } = useParams();
     const dispatch = useDispatch();
     const tasks = useSelector(state => state.tasks)
@@ -13,7 +19,6 @@ export default function Edit() {
     const [description, setdescription] = useState(tasks[id-1].Description);
     const [date, setdate] = useState(tasks[id-1].Due_Date);
     const [priority, setpriority] = useState(tasks[id-1].Priority);
-    const navigate = useNavigate();
     
     const onChangeTitle = (event) => {
         settitle(event.target.value.replace(/[^a-zA-Z\d]/ig, ""));

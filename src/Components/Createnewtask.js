@@ -5,13 +5,18 @@ import { addTask } from '../state/action-creators/index';
 import { useNavigate } from "react-router-dom";
 
 export default function Createnewtask() {
+    const navigate = useNavigate();
+    const token = useSelector(state => state.token)
+    if(token==="invalid")
+    {
+        navigate("/login",{replace:true})
+    }
     const [title, settitle] = useState("");
     const [description, setdescription] = useState("");
     const [date, setdate] = useState(new Date().toISOString().split('T')[0]);
     const [priority, setpriority] = useState("Medium");
     const tasks = useSelector(state => state.tasks)
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const onChangeTitle = (event) => {
         settitle(event.target.value.replace(/[^a-zA-Z\d]/ig, ""));

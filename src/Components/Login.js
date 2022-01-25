@@ -24,8 +24,6 @@ export const Login = () => {
             if(Email==="pranavvikh03@gmail.com" && Password==="Pnv@123")
             {
                 let data = await(await fetch("https://run.mocky.io/v3/afa1b987-0835-4ee1-9375-6f57caa5c609")).json();
-                
-                console.log(data);
                 alert("Login Successful");
                 dispatch(loginAddToken(data.token));
                 localStorage.setItem("token",data.token);

@@ -14,6 +14,7 @@ import {
 import Createnewtask from './Components/Createnewtask.js';
 import Delete from './Components/Delete.js';
 import Edit from './Components/Edit.js';
+import InvalidPage from './Components/invalidPage.js';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const App = () => {
         <Navbar />
         <div>
           <Routes>
+            <Route path="*" element={<InvalidPage />}/>
             <Route exact path="/" element={token!=='invalid'?<Home />:<Login />} />
             <Route exact path="/login" element={token!=='invalid'?<Home />:<Login />}/>
             <Route exact path="/logout" element={token!=='invalid'?<Logout />:<Login />}/>
