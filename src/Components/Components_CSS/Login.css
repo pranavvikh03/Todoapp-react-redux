@@ -1,0 +1,23 @@
+.LoginBox{
+    display:block;
+    box-sizing: border-box;
+    margin:10% 25%;
+    border:2px solid red;
+    padding:60px 8%;
+    border-radius:10px;
+}
+
+.form-element-group, .form-element-group label,.form-element-group input{
+    display:block;
+    box-sizing: border-box;
+    width:80%;
+    position:relative;
+    left:40px;
+    font-size: 20px;
+    font-weight:600;
+    /* padding:10px; */
+}
+.form-element-group input{
+    padding:10px;
+    margin:8px 0 16px 0;
+}

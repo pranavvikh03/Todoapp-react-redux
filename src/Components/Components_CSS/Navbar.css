@@ -1,0 +1,24 @@
+.navbar{
+    display:block;
+    background-color: rgb(46, 43, 43);
+}
+.navbar ul{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar li{
+    padding:20px 40px;
+    color:white;
+    list-style: none;
+    cursor:pointer;
+}
+.Link{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.navbar li:hover{
+    background-color: rgb(61, 58, 58);
+}

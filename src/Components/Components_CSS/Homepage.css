@@ -1,0 +1,55 @@
+.Homecontainer{
+    display:block;
+    width:80%;
+    margin:20px auto;
+}
+table{
+    position:relative;
+    top:60px;
+    border-collapse: collapse;
+    margin:0px;
+    width:100%;
+}
+.Homecontainer thead{
+    background-color:rgb(54, 54, 54);
+    color:white;
+}
+.Homecontainer th, td{
+    margin:0;
+    padding:12px 60px;
+    word-wrap: normal;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    border-bottom:2px solid rgb(170, 170, 170);
+}
+
+#new_task_btn{
+    padding:10px 26px;
+    font-size:16px;
+    font-weight:600;
+    background-color:brown;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    position:relative;
+    top:20px;
+    left:89%;
+    bottom:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+#new_task_btn:hover{
+    background-color:rgb(160, 74, 74);
+}
+.linkBtn{
+    padding:4px 8px;
+    margin:2px;
+    text-decoration: none;
+    background-color:rgb(243, 236, 224);
+}
+
+.linkBtn:hover{
+    background-color:rgb(131, 218, 189);
+    color:white;
+}
